@@ -1,0 +1,33 @@
+Sub sbi_same_bank_transfer()
+    Dim ws As Worksheet
+    Dim lastRow As Long
+    Dim rng As Range
+    
+    Set ws = ActiveSheet
+    
+    ' Find last row with data in columns A to H
+    lastRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row
+
+    ' AutoFit columns A to H
+    ws.Range("A1:H" & lastRow).Columns.AutoFit
+
+    ' Clear content of F1
+    ws.Range("F1").ClearContents
+
+    ' Format header row (A1:H1)
+    With ws.Range("A1:H1")
+        .Font.Bold = False
+        .HorizontalAlignment = xlLeft
+        .VerticalAlignment = xlTop
+        .WrapText = False
+    End With
+
+    ' Apply borders to all rows from A to H till last row with data
+    Set rng = ws.Range("A1:H" & lastRow)
+    
+    With rng.Borders
+        .LineStyle = xlContinuous
+        .Weight = xlThin
+    End With
+
+End Sub
