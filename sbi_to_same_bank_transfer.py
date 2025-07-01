@@ -12,10 +12,10 @@ os.makedirs(PROCESSED_FOLDER, exist_ok=True)
 
 # Allowed account numbers and their details
 ACCOUNT_MAP = {
-    "43557115725": {"name": "SBI Saksham", "ifsc": "SBIN00007773"},
-    "41256726637": {"name": "SBI Gram Seva", "ifsc": "SBIN00007773"},
-    "34889306900": {"name": "SCHCT Gorhe", "ifsc": "SBIN00007773"},
-    "40237416058": {"name": "SBI Wadi", "ifsc": "SBIN00007773"}
+    "43557115725": {"name": "SBI SCHCT", "ifsc": "07773"},
+    "41256726637": {"name": "SBI SCHCT", "ifsc": "07773"},
+    "34889306900": {"name": "SCHCT Gorhe", "ifsc": "07773"},
+    "40237416058": {"name": "SBI SCHCT", "ifsc": "07773"}
 }
 
 @app.route('/', methods=['GET'])
